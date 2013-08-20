@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Ejemplo basico para crear un mapa</title>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="lib/jquery.ui.map.js"></script>
+	<script src="lib/jquery.ui.map.extensions.js"></script>
+	<script src="lib/jquery.ui.map.services.js"></script>
+	<script>
+		$(document).on("ready", mapas);
+
+		function mapas(){
+			$("#map_canvas").gmap({"zoom":3}).bind("init", json);
+		};
+
+		function json(){
+			var url = "demo.json";
+
+			$.getJSON(url, recibirDatos);
+		};
+		
+		function recibirDatos(data){
+			var data_elements = data["markers"];
+
+			$.each(data_elements, function(i, current_element){
+				var lat = current_element["latitude"];
+				var lng = current_element["longitude"];
+				var title = current_element["title"];
+				var content = current_element["content"];
+				var position = new google.maps.LatLng(lat,lng);
+
+				$("#map_canvas").gmap("addMarker",{"position":position, "bounds":true}).click(function(){
+					$("#map_canvas").gmap("openInfoWindow",{"content":content}, this);
+				});
+			});
+		};
+	</script>
+</head>
+<body>
+	<p>Utilizando jquery ui maps recibiendo datos mediante JSON.<p>
+	<div id="map_canvas" style="height:350px;"></div>
+</body>
+</html>
