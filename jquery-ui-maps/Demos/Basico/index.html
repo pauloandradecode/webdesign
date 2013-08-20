@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Ejemplo basico para crear un mapa</title>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="lib/jquery.ui.map.js"></script>
+	<script src="lib/jquery.ui.map.extensions.js"></script>
+	<script src="lib/jquery.ui.map.services.js"></script>
+	<script>
+		$(document).on("ready", mapa);
+
+		function mapa(){
+			var lat = 20.67359;
+			var lng = -103.343803;
+			var center = new google.maps.LatLng(lat,lng);
+			var position = lat + "," + lng;
+			var content = "hello word";
+
+			$("#map_canvas_basic").gmap({"center":center, "zoom":5});
+
+			$("#map_canvas_marker").gmap().bind("init", function(ev, map){
+				$("#map_canvas_marker").gmap("addMarker", {"position": position, "bounds":true});
+			});
+
+			$("#map_canvas_infowindow").gmap().bind("init", function(ev, map){
+				$("#map_canvas_infowindow").gmap("addMarker", {"position": position, "bounds":true}).click(function(){
+					$("#map_canvas_infowindow").gmap("openInfoWindow",{"content":content}, this);
+					});
+			});
+		}
+
+	</script>
+</head>
+<body>
+	<p>Mapa basico.<p>
+	<div id="map_canvas_basic" style="height:350px;"></div>
+	<p>Mapa basico con marcador.</p>
+	<div id="map_canvas_marker" style="height:350px;"></div>
+	<p>Mapa basico con marcador y ventana de informacion.</p>
+	<div id="map_canvas_infowindow" style="height:350px;"></div>
+</body>
+</html>
