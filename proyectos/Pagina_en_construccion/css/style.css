@@ -73,7 +73,6 @@ nav ul li{
 }
 .countDays, .countHours, .countMinutes, .countSeconds {
     background: #e7e7e7;
-    background-image: linear-gradient(top, rgba(255,255,255,.1), rgba(0,0,0,.07));
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow:
@@ -141,7 +140,6 @@ form {
     height: 35px;
     padding: 0 15px;
     background: #f1f1f1;
-    background-image: linear-gradient(top, rgba(255,255,255,.02), rgba(0,0,0,.02));
     border: 1px solid #cbcbcb;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
     border-radius: 4px;
@@ -163,7 +161,6 @@ form {
     margin: 0 0 0 5px;
     padding: 0;
     background: #888;
-    background-image: linear-gradient(top, rgba(255,255,255,.1), rgba(0,0,0,.1));
     border: 1px solid #636363;
     box-shadow:
         0 1px 2px 0 rgba(253,252,252,.35) inset,
@@ -178,7 +175,6 @@ form {
     cursor: pointer;
 }
 .submit:hover {
-    background-image: linear-gradient(bottom, rgba(255,255,255,.1), rgba(0,0,0,.1));
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.15) inset;
 }
 .submit:active {
@@ -198,7 +194,7 @@ footer {
 
 footer ul {
    float: right;
-   width: 15%px;
+   width: 15%;
    height: 22px;
 }
 
