@@ -1,0 +1,247 @@
+body {
+    background: url(../images/body-pattern.jpg) top left repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 30px;
+}
+header {
+	margin-top:80px;
+	width: 100%;
+}
+header h1 {
+	color: #272727;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+}
+header p {
+    color: #272727;
+    font-size: 14px;
+    margin: 20px 0 0 3px;
+}
+nav{
+    color: #aaa;
+    width: 100%;
+}
+nav a{
+	color:#aaa;
+	text-decoration: none;
+}
+nav a:hover{
+	color: #aaa;
+	text-decoration: underline;
+}
+nav ul{
+	font-size:0;
+	text-align:center;
+}
+nav ul li{
+	display:inline-block;
+	font-size:12px;
+	font-weight: bold;
+	padding: 10px 0 10px 0;
+	text-align:center;
+	width:33%;
+}
+#main {
+	background: url(../images/main-content-pattern.jpg) top left repeat;
+    margin-top: 40px;
+    padding-top: 20px;
+    width: 100%;
+}
+#wrapper{
+	margin:0 auto;
+	max-width: 800px;
+}
+
+.home { background: url(../images/home.png) left center no-repeat; }
+.support { background: url(../images/support.png) left center no-repeat; }
+.browser { background: url(../images/browser.png) left center no-repeat; }
+
+/* ---- Counter ---- */
+#counter {
+	color: #272727;
+    height: 120px;
+    font-family: 'LeagueGothicRegular', Arial, Helvetica, sans-serif;
+    font-size: 92px;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    overflow: hidden;
+    width: 100%;
+}
+.countDays, .countHours, .countMinutes, .countSeconds {
+    background: #e7e7e7;
+    background-image: linear-gradient(top, rgba(255,255,255,.1), rgba(0,0,0,.07));
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow:
+        0 2px 3px 0 rgba(255,255,255,.2) inset,
+        0 2px 2px 0 rgba(0,0,0,.1);
+    display: inline-block;
+    height: 100px;
+    vertical-align: top;
+    width: 20%;
+}
+.points {
+    display: inline-block;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 44px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 138px;
+    text-shadow: none;
+    vertical-align: top;
+    width: 6%;
+}
+.position {
+	display: inline-block;
+    height: 70%;
+    vertical-align: top;
+    width: 30%;
+}
+.boxName {
+	display: none;
+}
+#days{
+    color: #aaa;
+    width: 100%;
+}
+#days ul{
+	font-size:0;
+	text-align:center;
+}
+#days ul li.days_a{
+	display:inline-block;
+	font-size:28px;
+	font-weight: bold;
+	padding: 10px 0 10px 0;
+	text-align:left;
+	width:20%;
+}
+#days ul li.days_b{
+	display:inline-block;
+	font-weight: bold;
+	padding: 10px 0 10px 0;
+	text-align:center;
+	width:6%;
+}
+/* ---- Subscription Form ---- */
+ 
+form {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+ 
+.email {
+    width: 70%;
+    height: 35px;
+    padding: 0 15px;
+    background: #f1f1f1;
+    background-image: linear-gradient(top, rgba(255,255,255,.02), rgba(0,0,0,.02));
+    border: 1px solid #cbcbcb;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #b3b2b2;
+    font-style: italic;
+}
+ 
+.email:focus {
+    outline: 0;
+    border: 1px solid #c0c0c0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.2) inset;
+}
+ 
+.submit {
+    width: 140px;
+    height: 37px;
+    margin: 0 0 0 5px;
+    padding: 0;
+    background: #888;
+    background-image: linear-gradient(top, rgba(255,255,255,.1), rgba(0,0,0,.1));
+    border: 1px solid #636363;
+    box-shadow:
+        0 1px 2px 0 rgba(253,252,252,.35) inset,
+        0 -1px 2px 0 rgba(0,0,0,.15) inset;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.35);
+    line-height: 13px;
+    cursor: pointer;
+}
+.submit:hover {
+    background-image: linear-gradient(bottom, rgba(255,255,255,.1), rgba(0,0,0,.1));
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.15) inset;
+}
+.submit:active {
+    box-shadow:
+        0 1px 2px 0 rgba(0,0,0,.15) inset,
+        0 3px 13px 3px rgba(0,0,0,.3) inset;
+    color: #ddd;
+}
+
+/* ---- Footer ---- */
+
+footer {
+   width: 100%;
+   padding: 20px 0;
+   overflow: hidden;
+}
+
+footer ul {
+   float: right;
+   width: 15%px;
+   height: 22px;
+}
+
+footer ul li {
+   display: inline-block;
+   vertical-align: top;
+}
+
+footer a {
+   position: relative;
+   display: block;
+   margin-left: 10px;
+}
+.twitter {
+   width: 21px;
+   height: 16px;
+   background: url(../images/twitter.png) center center no-repeat;
+}
+.skype {
+   width: 16px;
+   height: 16px;
+   background: url(../images/skype.png) center center no-repeat;
+}
+.social-media-arrow {
+   position: absolute;
+   top: 300px;
+   right: 100px;
+   width: 108px;
+   height: 256px;
+   background: url(../images/social-media-arrow.png) top left no-repeat;
+}
+@media screen and (max-width:1150px){
+.social-media-arrow {
+	display: none;
+}
+}
+@media screen and (max-width:480px){
+nav ul li{
+	width:100%;
+}
+}
+@media screen and (max-width:728px){
+nav ul li{
+	width:50%;
+}
+}
